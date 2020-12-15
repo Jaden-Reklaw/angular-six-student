@@ -30,6 +30,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { routes } from './app.route';
+import { ReactivejsComponent } from './reactivejs/reactivejs.component';
 
 // import {
 //   MatInputModule,
@@ -55,7 +56,8 @@ import { routes } from './app.route';
     NavComponent,
     DashboardComponent,
     ExpandingPanelComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    ReactivejsComponent
   ],
   imports: [
     BrowserModule,
