@@ -29,6 +29,7 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { routes } from './app.route';
 
 // import {
 //   MatInputModule,
@@ -75,7 +76,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatSortModule,
     MatExpansionModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    routes
   ],
   providers: [],
   bootstrap: [AppComponent]
