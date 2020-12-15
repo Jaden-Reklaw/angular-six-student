@@ -1,1 +1,8 @@
 <ul id="obs-list"></ul>
+<hr />
+<div class="my-icon-list">
+    <p *ngFor="let icon of iconList">
+        <mat-icon matBadge="{{icon.count}}" matBadgeColor="{{icon.color}}" matBadgeSize="{{icon.size}}" matBadgePosition="{{icon.position}}">{{icon.symbol}}</mat-icon>
+    </p>
+</div>
+

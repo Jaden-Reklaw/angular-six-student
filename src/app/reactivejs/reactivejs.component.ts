@@ -1,17 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
 
+
+export class IconWithBadge {
+  symbol: string;
+  count: number;
+  color: string;
+  position?: string;
+  size?: string;
+
+  constructor(symbol:string, count: number, color: string) {
+    this.symbol = symbol;
+    this.count = count;
+    this.color = color;
+  }
+}
+
 @Component({
   selector: 'app-reactivejs',
   templateUrl: './reactivejs.component.html',
   styleUrls: ['./reactivejs.component.css']
 })
+
 export class ReactivejsComponent implements OnInit {
+
+  iconList: IconWithBadge[] = [
+    {symbol: 'home', count: 13, color: 'warn', size: 'large'},
+    {symbol: 'bookmark', count: 7, color: 'warn'},
+    {symbol: 'cached', count: 10, color: 'primary', size: 'medium'},
+    {symbol: 'dashboard', count: 1, color: 'accent', size: 'medium', position: 'before below'},
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.mouseLog();
+    //this.mouseLog();
 
     const obs = Observable.create((observer:any) => {
         observer.next("Welcome Back Developer!");

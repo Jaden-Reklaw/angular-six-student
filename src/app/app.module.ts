@@ -31,24 +31,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { routes } from './app.route';
 import { ReactivejsComponent } from './reactivejs/reactivejs.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
-// import {
-//   MatInputModule,
-//   MatToolbarModule,
-//   MatButtonModule,
-//   MatSidenavModule,
-//   MatIconModule,
-//   MatListModule,
-//   MatGridListModule,
-//   MatCardModule,
-//   MatMenuModule,
-//   MatTableModule,
-//   MatPaginatorModule,
-//   MatSortModule,
-//   MatExpansionModule,
-//   MatDatepickerModule,
-//   MatNativeDateModule
-// } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -79,6 +63,7 @@ import { ReactivejsComponent } from './reactivejs/reactivejs.component';
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatBadgeModule,
     routes
   ],
   providers: [],
