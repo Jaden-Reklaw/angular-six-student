@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
 
 
@@ -31,10 +31,14 @@ export class ReactivejsComponent implements OnInit {
     {symbol: 'dashboard', count: 1, color: 'accent', size: 'medium', position: 'before below'},
   ];
 
+  evtEmitter = new EventEmitter();
+  events: string[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
     //this.mouseLog();
+    this.subscribeEventEmitter();
 
     const obs = Observable.create((observer:any) => {
         observer.next("Welcome Back Developer!");
@@ -59,4 +63,15 @@ export class ReactivejsComponent implements OnInit {
     })
   }
 
+  evtClick() {
+    let randomNumber = Math.random();
+    this.evtEmitter.emit(randomNumber);
+  }
+
+  subscribeEventEmitter() {
+    this.evtEmitter.subscribe((e) => {
+      console.log('From event emitter', e);
+      this.events.push(e);
+    });
+  }
 }

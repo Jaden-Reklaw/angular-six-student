@@ -5,4 +5,10 @@
         <mat-icon matBadge="{{icon.count}}" matBadgeColor="{{icon.color}}" matBadgeSize="{{icon.size}}" matBadgePosition="{{icon.position}}">{{icon.symbol}}</mat-icon>
     </p>
 </div>
+<hr />
+<button mat-raised-button color="primary" (click)="evtClick()">Primary</button>
+<ul>
+    <li *ngFor="let evt of events">{{evt}}</li>
+</ul>
+
 
